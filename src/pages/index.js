@@ -66,7 +66,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-4">Calculation Practice</h1>
         <form onSubmit={handleSubmit}>
           <div className="flex items-center mb-4">
-            <div className="text-xl mr-2">{num1} + {num2} =</div>
+            <div className="text-xl mr-2 bg-blue-500">{num1} + {num2} =</div>
             <input
               className="border border-gray-300 p-2 w-20"
               type="text"
