@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect , useRef  } from 'react';
 
 function generateRandomNumber(max) {
   return Math.floor(Math.random() * max) + 1;
@@ -11,8 +11,10 @@ export default function Home() {
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('');
   const [gameOver, setGameOver] = useState(false);
+  const inputRef = useRef(null);
 
   useEffect(() => {
+    inputRef.current.focus();
     const timer = setTimeout(() => {
       setGameOver(true);
       document.getElementById("inputt").click();
@@ -70,6 +72,7 @@ export default function Home() {
           <div className="flex items-center mb-4">
             <div className="text-xl mr-2 text-black-500">{num1} + {num2} =</div>
             <input
+              ref={inputRef}
               id='inputt'
               className="border border-gray-300 p-2 w-20 text-black-500"
               type="number"
