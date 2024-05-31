@@ -61,8 +61,8 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md">
+    <div className="min-h-screen flex items-start justify-center bg-gray-100">
+      <div className="bg-white mt-5 p-8 rounded-lg shadow-md">
         <h1 className="text-3xl text-green-500 font-bold mb-4">Calculation Practice</h1>
         <form onSubmit={handleSubmit}>
           <div className="flex items-center mb-4">
@@ -72,6 +72,7 @@ export default function Home() {
               type="number"
               value={userInput}
               onChange={handleInputChange}
+              autoFocus
               disabled={gameOver} // Disable input when game is over
             />
           </div>
