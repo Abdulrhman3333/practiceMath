@@ -15,6 +15,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setGameOver(true);
+      document.getElementById("inputt").click();
     }, 5000); // One minute
 
     return () => clearTimeout(timer);
@@ -58,6 +59,7 @@ export default function Home() {
     setNum1(generateRandomNumber(10));
     setNum2(generateRandomNumber(10));
     setScore(0);
+    document.getElementById("inputt").click();
   }
 
   return (
@@ -68,11 +70,13 @@ export default function Home() {
           <div className="flex items-center mb-4">
             <div className="text-xl mr-2 text-black-500">{num1} + {num2} =</div>
             <input
+              id='inputt'
               className="border border-gray-300 p-2 w-20 text-black-500"
               type="number"
               value={userInput}
               onChange={handleInputChange}
               autoFocus
+              
               disabled={gameOver} // Disable input when game is over
             />
           </div>
