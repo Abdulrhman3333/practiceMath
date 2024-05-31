@@ -15,9 +15,10 @@ export default function Home() {
 
   useEffect(() => {
     inputRef.current.focus();
+    inputRef.current.click();
     const timer = setTimeout(() => {
       setGameOver(true);
-      document.getElementById("inputt").click();
+      // document.getElementById("inputt").click();
     }, 5000); // One minute
 
     return () => clearTimeout(timer);
