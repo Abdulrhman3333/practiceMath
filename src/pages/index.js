@@ -63,13 +63,13 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold mb-4">Calculation Practice</h1>
+        <h1 className="text-3xl text-black-500 font-bold mb-4">Calculation Practice</h1>
         <form onSubmit={handleSubmit}>
           <div className="flex items-center mb-4">
-            <div className="text-xl mr-2 bg-blue-500">{num1} + {num2} =</div>
+            <div className="text-xl mr-2 text-black-500">{num1} + {num2} =</div>
             <input
-              className="border border-gray-300 p-2 w-20"
-              type="text"
+              className="border border-gray-300 p-2 w-20 text-black-500"
+              type="number"
               value={userInput}
               onChange={handleInputChange}
               disabled={gameOver} // Disable input when game is over
